@@ -1,0 +1,16 @@
+{
+  "name": "kalkulacka",
+  "version": "1.0.0",
+  "description": "Kalkulacka delana v JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jakub Kosinka",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "http": "^0.0.1-security",
+    "nodemon": "^2.0.20"
+  }
+}
