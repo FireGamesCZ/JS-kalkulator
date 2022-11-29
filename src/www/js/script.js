@@ -16,22 +16,40 @@ function cislo(vstup) {
     display.innerHTML = cislo1;
 }
 
-function operace(vyber){
-    if(cislo2 == 0){
-        cislo2 = cislo1;
-        cislo1 = 0;
-        operandi = vyber;
-    }else{
-        vysledek();
-        cislo2 = cislo1;
-        cislo1 = 0;
-        operandi = vyber;
-    }
+function scitani(){
+    
+}
+
+function odcitani(){
+    
+}
+
+function nasobeni(){
+    
+}
+
+function deleni(){
+    
 }
 
 function vysledek(){
     if(operandi == "+"){
         cislo2 = parseFloat(cislo1) + parseFloat(cislo2);
+        display.innerHTML = cislo2;
+        vypocitan = true;
+    }
+    if(operandi == "-"){
+        cislo2 = parseFloat(cislo2) - parseFloat(cislo1);
+        display.innerHTML = cislo2;
+        vypocitan = true;
+    }
+    if(operandi == "*"){
+        cislo2 = parseFloat(cislo2) * parseFloat(cislo1);
+        display.innerHTML = cislo2;
+        vypocitan = true;
+    }
+    if(operandi == "/"){
+        cislo2 = parseFloat(cislo2) / parseFloat(cislo1);
         display.innerHTML = cislo2;
         vypocitan = true;
     }
