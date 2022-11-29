@@ -2,8 +2,13 @@ let cislo1 = 0;
 let cislo2 = 0;
 var display = document.getElementById("display");
 let operandi
+let vypocitan = false;
 
 function cislo(vstup) {
+    if (vypocitan == true){
+        cislo1 = 0;
+        vypocitan = false;
+    }
     if(cislo1 == 0){
         cislo1 = vstup;
     }else{
@@ -12,18 +17,25 @@ function cislo(vstup) {
 }
 
 function operace(vyber){
-    cislo2 = cislo1;
-    cislo1 = 0;
-    display.innerHTML = cislo2;
-    operandi = vyber;
+    if(cislo2 == 0){
+        cislo2 = cislo1;
+        cislo1 = 0;
+        operandi = vyber;
+    }else{
+        vysledek();
+        cislo2 = cislo1;
+        cislo1 = 0;
+        operandi = vyber;
+    }
 }
 
 function vysledek(){
     if(operandi == "+"){
-        cislo2 = parseInt(cislo1) + parseInt(cislo2);
+        cislo2 = parseFloat(cislo1) + parseFloat(cislo2);
         display.innerHTML = cislo2;
+        vypocitan = true;
     }
-    cislo1 = 0
+
 }
 
 function plusminus(){
