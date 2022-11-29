@@ -63,3 +63,18 @@ function bs(){
     cislo1 = substring(0, cislo1.length - 1);
     display.innerHTML = cislo1;
 }
+
+function mocnina(){
+    cislo1 = Math.pow(cislo1, 2);
+    display.innerHTML = cislo1;
+}
+
+function odmocnina(){
+    cislo1 = Math.sqrt(cislo1);
+    display.innerHTML = cislo1;
+}
+
+function prevracene(){
+    cislo1 = 1 / cislo1;
+    display.innerHTML = cislo1;
+}

@@ -21,6 +21,8 @@ body{
 
 #display{
     font-size: 4em;
+    text-align: right;
+    /* transform: matrix(1, 0, 0, -1, 0, 0); */
 }
 
 #klavesnice{
