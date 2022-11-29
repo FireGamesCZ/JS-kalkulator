@@ -23,6 +23,7 @@ function vysledek(){
         cislo2 = parseInt(cislo1) + parseInt(cislo2);
         display.innerHTML = cislo2;
     }
+    cislo1 = 0
 }
 
 function plusminus(){
