@@ -132,3 +132,8 @@ function prevracene(){
     cislo1 = 1 / cislo1;
     display.innerHTML = cislo1;
 }
+
+function procento(){
+    cislo1 = cislo2 / 100 * cislo1;
+    display.innerHTML = cislo1;
+}
