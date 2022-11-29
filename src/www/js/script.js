@@ -1,5 +1,5 @@
 let cislo1 = 0;
-let cislo2 = 0;
+let cislo2
 var display = document.getElementById("display");
 let operandi
 let vypocitan = false;
@@ -17,19 +17,51 @@ function cislo(vstup) {
 }
 
 function scitani(){
-    
+    if (cislo2 == 0 && vypocitan==false){
+        cislo2 = cislo1;
+        cislo1 = 0;
+        operandi = "+";}
+    else{
+        vysledek();
+        operandi = "+";
+        cislo1 = 0;
+    }
 }
 
 function odcitani(){
-    
+    if (cislo2 == 0){
+        cislo2 = cislo1;
+        cislo1 = 0;
+        operandi = "-";}
+    else{
+        vysledek();
+        operandi = "-";
+        cislo1 = 0;
+    }
 }
 
 function nasobeni(){
-    
+    if (cislo2 == 0){
+        cislo2 = cislo1;
+        cislo1 = 0;
+        operandi = "*";}
+    else{
+        vysledek();
+        operandi = "*";
+        cislo1 = 0;
+    }
 }
 
 function deleni(){
-    
+    if (cislo2 == 0){
+        cislo2 = cislo1;
+        cislo1 = 0;
+        operandi = "/";}
+    else{
+        vysledek();
+        operandi = "/";
+        cislo1 = 0;
+    }
 }
 
 function vysledek(){
@@ -38,17 +70,17 @@ function vysledek(){
         display.innerHTML = cislo2;
         vypocitan = true;
     }
-    if(operandi == "-"){
+    else if(operandi == "-"){
         cislo2 = parseFloat(cislo2) - parseFloat(cislo1);
         display.innerHTML = cislo2;
         vypocitan = true;
     }
-    if(operandi == "*"){
+    else if(operandi == "*"){
         cislo2 = parseFloat(cislo2) * parseFloat(cislo1);
         display.innerHTML = cislo2;
         vypocitan = true;
     }
-    if(operandi == "/"){
+    else if(operandi == "/"){
         cislo2 = parseFloat(cislo2) / parseFloat(cislo1);
         display.innerHTML = cislo2;
         vypocitan = true;
@@ -78,7 +110,11 @@ function ce(){
 }
 
 function bs(){
-    cislo1 = substring(0, cislo1.length - 1);
+    cislo1 = cislo1.toString();
+    cislo1 = cislo1.substring(0, cislo1.length - 1);
+    if (cislo1 == ""){
+        cislo1 = 0;
+    }
     display.innerHTML = cislo1;
 }
 
