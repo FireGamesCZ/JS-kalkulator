@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulačka</title>
     <link rel="stylesheet" href="style.css">
-
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="./js/script.js"></script>
 </head>
 <body>
     <div id="kalkulacka">
@@ -25,32 +26,32 @@
                     <td><button onclick="deleni()">÷</button></td>
                 </tr>
                 <tr>
-                    <td><button onclick="cislo(7)">7</button></td>
-                    <td><button onclick="cislo(8)">8</button></td>
-                    <td><button onclick="cislo(9)">9</button></td>
+                    <td><button class="cislo">7</button></td>
+                    <td><button class="cislo">8</button></td>
+                    <td><button class="cislo">9</button></td>
                     <td><button onclick="nasobeni()">×</button></td>
                 </tr>
                 <tr>
-                    <td><button onclick="cislo(4)">4</button></td>
-                    <td><button onclick="cislo(5)">5</button></td>
-                    <td><button onclick="cislo(6)">6</button></td>
+                    <td><button class="cislo">4</button></td>
+                    <td><button class="cislo">5</button></td>
+                    <td><button class="cislo">6</button></td>
                     <td><button onclick="odcitani()">-</button></td>
                 </tr>
                 <tr>
-                    <td><button onclick="cislo(1)">1</button></td>
-                    <td><button onclick="cislo(2)">2</button></td>
-                    <td><button onclick="cislo(3)">3</button></td>
+                    <td><button class="cislo">1</button></td>
+                    <td><button class="cislo">2</button></td>
+                    <td><button class="cislo">3</button></td>
                     <td><button onclick="scitani()">+</button></td>
                 </tr>
                 <tr>
                     <td><button onclick="plusminus()">±</button></td>
-                    <td><button onclick="cislo(0)">0</button></td>
+                    <td><button class="cislo">0</button></td>
                     <td><button onclick="carka()">,</button></td>
                     <td><button onclick="vysledek()">=</button></td>
                 </tr>
             </table>
         </div>
     </div>
-    <script src="./js/script.js"></script>
+    
 </body>
 </html>
