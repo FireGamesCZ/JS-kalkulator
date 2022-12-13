@@ -42,7 +42,12 @@ function cislo(vstup) {
         vypocitan = false;
     }
     else {
-        cislo1 = cislo1.toString + vstup.toString();
+        if (cislo1 == 0) {
+            cislo1 = vstup;
+        }
+        else {
+        cislo1 = cislo1.toString() + vstup.toString();
+        }
         display.innerHTML = cislo1;
     }
 }
