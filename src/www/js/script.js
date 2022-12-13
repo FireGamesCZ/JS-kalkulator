@@ -12,7 +12,7 @@ function cislo(vstup) {
         vypocitan = false;
     }
     else {
-        if (cislo1 == 0) {
+        if (cislo1 == "0") {
             cislo1 = vstup;
         }
         else {
@@ -65,8 +65,15 @@ function plusminus(){
 }
 
 function carka(){
+    cislo1 = cislo1.toString();
+    for(i = 0; i < cislo1.length; i++){
+        if (cislo1[i] == "."){
+            return;
+        }
+    }
     cislo1 = cislo1 + ".";
     display.innerHTML = cislo1;
+
 }
 
 function c(){
