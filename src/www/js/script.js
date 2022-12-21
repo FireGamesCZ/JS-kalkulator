@@ -30,6 +30,7 @@ $(document).ready(() => {
     $("#odmocnina").click(() => odmocnina());
     $("#prevracene").click(() => prevracene());
     $("#procenta").click(() => procento());
+    odeslatStatistiky("start");
 }
 );
 
@@ -50,6 +51,8 @@ function cislo(vstup) {
         }
         display.innerHTML = cislo1;
     }
+    odeslatStatistiky(vstup);
+
 }
 
 function vysledek(){
@@ -67,31 +70,37 @@ function vysledek(){
     }
     display.innerHTML = cislo1;
     vypocitan = true;
+    odeslatStatistiky("=");
 }
 
 function scitani(){
     vysledek();
     operandi = "+";
+    odeslatStatistiky("+");
 }
 
 function odcitani(){
     vysledek();
     operandi = "-";
+    odeslatStatistiky("-");
 }
 
 function nasobeni(){
     vysledek();
     operandi = "*";
+    odeslatStatistiky("*");
 }
 
 function deleni(){   
     vysledek();
     operandi = "/";
+    odeslatStatistiky("/");
 }
 
 function plusminus(){
     cislo1 = cislo1 * -1;
     display.innerHTML = cislo1;
+    odeslatStatistiky("+/-");
 }
 
 function carka(){
@@ -103,17 +112,20 @@ function carka(){
     }
     cislo1 = cislo1 + ".";
     display.innerHTML = cislo1;
+    odeslatStatistiky(",");
 }
 
 function c(){
     cislo1 = 0;
     display.innerHTML = cislo1;
+    odeslatStatistiky("C");
 }
 
 function ce(){
     cislo1 = 0;
     cislo2 = 0;
     display.innerHTML = 0;
+    odeslatStatistiky("CE");
 }
 
 function bs(){
@@ -123,26 +135,31 @@ function bs(){
         cislo1 = 0;
     }
     display.innerHTML = cislo1;
+    odeslatStatistiky("BS");
 }
 
 function mocnina(){
     cislo1 = Math.pow(cislo1, 2);
     display.innerHTML = cislo1;
+    odeslatStatistiky("x²");
 }
 
 function odmocnina(){
     cislo1 = Math.sqrt(cislo1);
     display.innerHTML = cislo1;
+    odeslatStatistiky("√x");
 }
 
 function prevracene(){
     cislo1 = 1 / cislo1;
     display.innerHTML = cislo1;
+    odeslatStatistiky("1/x");
 }
 
 function procento(){
     cislo1 = cislo2 / 100 * cislo1;
     display.innerHTML = cislo1;
+    odeslatStatistiky("%");
 }
 
 
